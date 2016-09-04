@@ -1,0 +1,42 @@
+
+
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <div class = "row">
+  	<div class = "col-md-12" align = "center">
+  		<title>My TODO List</title>
+	</div>
+</div>
+
+
+</head>
+
+<body>
+
+ <div class = "row">
+  	<div class = "col-md-12" align = "center">
+<ol>
+	<% @todos.each do |t|%>
+			<li>
+
+				<%=t.body%>
+				 <%= link_to 'Remove', t, :method => :delete %>
+			</li>
+	<%end%>
+	</ol>
+	</div>
+	</div>
+	<div class = "row">
+  	<div class = "col-md-12" align = "center">
+	<a href="/"> Add a new item! </a>
+	</div>
+	</div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

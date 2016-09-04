@@ -1,0 +1,14 @@
+<!doctyl html>
+
+<html>
+		    <%= form_for(@todo) do |f| %>
+		            <%= f.label :body, "Todo Item:" %>
+		            <%= f.text_field :body, autofocus: true%>
+
+		        <%= f.hidden_field :finished, :value => false %>
+
+
+	            <%= f.submit "Add"%> 
+	            <% end %>
+
+</html>
